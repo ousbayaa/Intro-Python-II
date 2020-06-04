@@ -2,7 +2,7 @@ from room import Room
 
 # Declare all the rooms
 
-room = {
+room = { # constructor
     'outside':  Room("Outside Cave Entrance",
                      "North of you, the cave mount beckons"),
 
