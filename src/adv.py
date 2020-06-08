@@ -21,7 +21,9 @@ chamber! Sadly, it has already been completely emptied by
 earlier adventurers. The only exit is to the south."""),
 }
 
-
+#add items
+room['outside'].items = ['A Sword', 'A Shield', 'Mace']
+room['foyer'].items = ['A Vase', 'A Decaying Corpse', 'Milk and Cookies']
 # Link rooms together
 
 room['outside'].n_to = room['foyer']
@@ -92,3 +94,9 @@ while True:
     elif first_char == 'w':
         # move to the west 
         try_direction(player, first_char)
+    elif first_char == 'v':
+        print("Items available in room:")
+        [ print('-',item) for item in player.current_room.items]
+    elif first_char == 'a':
+        print("Add item to your inventory")
+        

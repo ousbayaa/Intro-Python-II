@@ -11,15 +11,7 @@ class Room:
  #      self.s_to = None
  #      self.e_to = None
  #      self.w_to = None
-        if items == None:
-            self.items = None
-        else:
-            self.items = self.init_items(items)
+        self.items = items
 
     def __str__(self):
         return f"{self.name}: {self.description}"
-
-    def init_items(self, items):
-        return [Item(name, description) for name, description in items]
-
-
